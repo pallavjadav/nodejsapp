@@ -10,7 +10,7 @@ const app = express();
 // Configure app middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+mongoose.set('strictQuery', false);
 // Connect to MongoDB database
 mongoose.connect('mongodb+srv://sapbtpuser:0oLjjgGniuwz5K91@sapbtp-dev-cluster.fypxk.mongodb.net/PasswordGenerator?retryWrites=true&w=majority', {
   useNewUrlParser: true,
