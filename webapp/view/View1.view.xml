@@ -1,0 +1,42 @@
+<mvc:View controllerName="test.testapp.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:l="sap.ui.layout.form">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <l:SimpleForm
+                adjustLabelSpan="true"
+                backgroundDesign="Translucent"
+                breakpointL="1024"
+                breakpointM="600"
+                breakpointXL="1440"
+                columnsL="2"
+                columnsM="1"
+                columnsXL="-1"
+                editable=""
+                emptySpanL="0"
+                emptySpanM="0"
+                emptySpanS="0"
+                emptySpanXL="-1"
+                labelMinWidth="192"
+                labelSpanL="4"
+                labelSpanM="2"
+                labelSpanS="12"
+                labelSpanXL="-1"
+                layout="ResponsiveLayout"
+                maxContainerCols="2"
+                minWidth="-1"
+                singleContainerFullSize="true"
+                width=""
+            >
+                <l:content>
+                    <Label text="UserName" />
+                    <Input type="Text" value="{formModel>/username}"/>
+                    <Label text="Password" />
+                    <Input type="Password" value="{formModel>/password}" />
+                </l:content>
+                <l:title />
+                <l:toolbar />
+            </l:SimpleForm>
+			<Button text="Register" press="onRegister"/>
+			<Button text = "Submit" press="onSubmit"/>
+        </content>
+    </Page>
+</mvc:View>
